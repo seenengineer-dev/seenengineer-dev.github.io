@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thank you | SEEN Engineering Services</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html">
+      <img class="brand-logo" src="assets/seen-logo.png" alt="SEEN logo" />
+      <div class="brand-text">
+        <div class="brand-name">SEEN</div>
+        <div class="brand-sub">Engineering Services</div>
+      </div>
+    </a>
+
+    <div class="topbar-actions">
+      <button class="btn btn-ghost" id="langToggle">FR</button>
+      <a class="btn btn-primary" href="index.html">Home</a>
+    </div>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="card">
+      <h1 data-i18n="thanks_h2">Thank you</h1>
+      <p class="muted" data-i18n="thanks_p">
+        Your message has been sent successfully. We will get back to you shortly.
+      </p>
+      <a class="btn btn-outline" href="index.html" data-i18n="thanks_btn">
+        Back to home
+      </a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <strong>SEEN Engineering Services</strong><br>
+      <span class="muted">Engineering with Vision</span>
+    </div>
+    <div class="muted">
+      © <span id="year"></span> SEEN Engineering Services Inc.<br>
+      Operating in Québec as SEEN Services d’ingénierie
+    </div>
+  </div>
+</footer>
+
+<script src="script.js?v=2"></script>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
