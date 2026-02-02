@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Hero
       pill: "Génie professionnel • Québec & Canada",
       h1: "L’ingénierie avec vision.",
-      lead: "SEEN Engineering Services offre des solutions d’ingénierie claires, conformes aux codes et constructibles, avec un fort accent sur les systèmes électriques et la distribution de puissance.",
+      lead: "SEEN Ingénierie offre des solutions d’ingénierie claires, conformes aux codes et constructibles, avec un fort accent sur les systèmes électriques et la distribution de puissance.",
 
       trust1_title: "Bilingue",
       trust1_text: "Livrables FR/EN",
