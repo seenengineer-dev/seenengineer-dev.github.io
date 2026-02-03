@@ -54,9 +54,6 @@ document.addEventListener("DOMContentLoaded", () => {
       f_submit: "Send",
 
       contact_alt_label: "Or email us directly",
-      copy_btn: "Copy email",
-      copied: "Copied to clipboard.",
-      copy_fail: "Copy failed. Please copy manually.",
 
       sending: "Sending…",
       sent: "Message sent. Redirecting…",
@@ -117,9 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
       f_submit: "Envoyer",
 
       contact_alt_label: "Ou écrivez-nous directement",
-      copy_btn: "Copier l’email",
-      copied: "Copié dans le presse-papiers.",
-      copy_fail: "Impossible de copier. Veuillez copier manuellement.",
 
       sending: "Envoi en cours…",
       sent: "Message envoyé. Redirection…",
@@ -157,20 +151,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // ----- Email obfuscation + copy-to-clipboard -----
   // (Email is never written as a single string in HTML source.)
-  const emailUser = "info";
-  const emailDomain = "seen-ingenierie";
-  const emailTld = "ca";
-  const email = `${emailUser}@${emailDomain}.${emailTld}`;
+  // ----- Email obfuscation (clean & professional) -----
+const emailUser = "info";
+const emailDomain = "seen-ingenierie";
+const emailTld = "ca";
+const email = `${emailUser}@${emailDomain}.${emailTld}`;
 
-  const emailLink = document.getElementById("emailLink");
-  const emailText = document.getElementById("emailText");
-  const copyBtn = document.getElementById("copyEmailBtn");
-  const copyStatus = document.getElementById("copyStatus");
+const emailLink = document.getElementById("emailLink");
+if (emailLink) {
+  emailLink.href = `mailto:${email}`;
+  emailLink.textContent = email;
+}
 
-  if (emailLink) emailLink.href = `mailto:${email}`;
-  if (emailText) emailText.textContent = email;
 
   async function copyEmail() {
     if (!copyStatus) return;
