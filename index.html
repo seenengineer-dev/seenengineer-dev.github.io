@@ -50,6 +50,21 @@
         <a class="btn btn-primary" href="#services" data-i18n="cta_primary">Explore Services</a>
         <a class="btn btn-outline" href="#contact" data-i18n="cta_secondary">Contact</a>
       </div>
+
+      <div class="trust">
+        <div class="trust-item">
+          <div class="trust-title" data-i18n="trust1_title">Bilingual</div>
+          <div class="trust-text" data-i18n="trust1_text">FR / EN deliverables</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-title" data-i18n="trust2_title">Compliant</div>
+          <div class="trust-text" data-i18n="trust2_text">Code-driven engineering</div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-title" data-i18n="trust3_title">Practical</div>
+          <div class="trust-text" data-i18n="trust3_text">Buildable designs</div>
+        </div>
+      </div>
     </div>
 
     <div class="card">
@@ -61,6 +76,33 @@
         <li data-i18n="card_li4">Utility coordination (Hydro-Québec)</li>
         <li data-i18n="card_li5">Engineering support for contractors & owners</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2 data-i18n="services_h2">Services</h2>
+      <p class="muted" data-i18n="services_p">
+        Clear scope, clean deliverables, and code-compliant engineering.
+      </p>
+    </div>
+
+    <div class="grid3">
+      <div class="card">
+        <h3 data-i18n="s1_h3">Electrical Engineering</h3>
+        <p class="muted" data-i18n="s1_p">Design, calculations and documentation.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="s2_h3">Power Distribution</h3>
+        <p class="muted" data-i18n="s2_p">Service entrance, distribution and metering strategy.</p>
+      </div>
+      <div class="card">
+        <h3 data-i18n="s3_h3">Utility Coordination</h3>
+        <p class="muted" data-i18n="s3_p">Hydro-Québec requests and technical follow-ups.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -90,6 +132,7 @@
           </label>
           <label>
             <span data-i18n="f_email">Email</span>
+            <!-- Keep name="email" so Formspree sets Reply-To to the visitor (all plans). -->
             <input type="email" name="email" required>
           </label>
         </div>
@@ -125,18 +168,25 @@
         </label>
 
         <button class="btn btn-primary" type="submit" data-i18n="f_submit">Send</button>
-<p id="formStatus" class="muted" style="display:none;margin-top:10px;"></p>
+        <p id="formStatus" class="muted" style="display:none;margin-top:10px;"></p>
 
-<div class="contact-alt">
-  <p class="muted">
-    <a href="mailto:info@seen-ingenierie.ca"
-       class="link"
-       data-i18n="contact_alt_email">
-      Or email us directly: info@seen-ingenierie.ca
-    </a>
-  </p>
-</div>
-        
+        <!-- Obfuscated email + copy button (email is inserted by JS) -->
+        <div style="margin-top:14px;">
+          <div class="mini-text muted" data-i18n="contact_alt_label">Or email us directly</div>
+
+          <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:8px;">
+            <a id="emailLink" class="link" href="#" aria-label="Email SEEN">
+              <span id="emailText">info [at] seen-ingenierie [dot] ca</span>
+            </a>
+
+            <button class="btn btn-outline" type="button" id="copyEmailBtn" data-i18n="copy_btn">
+              Copy email
+            </button>
+          </div>
+
+          <div class="mini-text muted" id="copyStatus" style="margin-top:6px; display:none;"></div>
+        </div>
+
       </form>
     </div>
   </div>
@@ -150,16 +200,13 @@
     </div>
     <div class="muted">
       © <span id="year"></span> SEEN Engineering Services Inc.<br>
-      <span data-i18n="footer_legal">Operating in Québec as SEEN Services d’ingénierie</span><br>
-      <a href="mailto:info@seen-ingenierie.ca" class="link">info@seen-ingenierie.ca</a>
-    </div>
-
+      <span data-i18n="footer_legal">Operating in Québec as SEEN Services d’ingénierie</span>
     </div>
   </div>
 </footer>
 
 </main>
 
-<script src="script.js?v=12"></script>
+<script src="script.js?v=13"></script>
 </body>
 </html>
