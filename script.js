@@ -43,6 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // Contact
       contact_h2: "Contact",
       contact_p: "Contact us using the form below.",
+      contact_alt_email: "Or email us directly: info@seen-ingenierie.ca",
+
 
       // Form fields
       f_name: "Name",
@@ -108,6 +110,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // Contact
       contact_h2: "Nous joindre",
       contact_p: "Contactez-nous via le formulaire ci-dessous.",
+      contact_alt_email: "Ou écrivez-nous directement : info@seen-ingenierie.ca",
+
 
       // Form fields
       f_name: "Nom",
