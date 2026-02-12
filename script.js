@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Hero
       pill: "Professional Engineering • Québec & Canada",
       h1: "Engineering with Vision.",
-      lead: "SEEN Engineering L.L.P provides clear, code-compliant and constructible engineering solutions with a strong focus on electrical systems and power distribution.",
+      lead: "SEEN Engineering L.L.P. provides clear, code-compliant and constructible engineering solutions with a strong focus on electrical systems and power distribution.",
       cta_primary: "Explore Services",
       cta_secondary: "Contact",
 
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Hero
       pill: "Génie professionnel • Québec & Canada",
       h1: "L’ingénierie avec vision.",
-      lead: "SEEN Engineering L.L.P offre des solutions d’ingénierie claires, conformes aux codes et constructibles, avec un fort accent sur les systèmes électriques et la distribution de puissance.",
+      lead: "SEEN Ingénierie S.E.N.C.R.L. offre des solutions d’ingénierie claires, conformes aux codes et constructibles, avec un fort accent sur les systèmes électriques et la distribution de puissance.",
       cta_primary: "Voir les services",
       cta_secondary: "Nous joindre",
 
