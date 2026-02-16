@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <!-- Base SEO (script.js overwrites per language) -->
   <title>Merci | SEEN Ingénierie</title>
+  <meta name="description" content="Merci — SEEN Ingénierie." />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -19,13 +23,9 @@
     </a>
 
     <div class="topbar-actions">
-      <a class="btn btn-outline" href="https://seen-ingenierie.ca" target="_blank" rel="noopener">seen-ingenierie.ca</a>
-      <a class="btn btn-outline" href="https://seen-engineering.com" target="_blank" rel="noopener">seen-engineering.com</a>
-
-      <button class="btn btn-ghost" id="langToggle">EN</button>
-      <a class="btn btn-primary" href="index.html" data-i18n="thanks_btn">
-        Retour à l’accueil
-      </a>
+      <!-- No domain buttons. Language toggle switches domains. -->
+      <button class="btn btn-ghost" id="langToggle" aria-label="Changer de langue">EN</button>
+      <a class="btn btn-primary" href="index.html" data-i18n="thanks_btn">Retour à l’accueil</a>
     </div>
   </div>
 </header>
@@ -54,21 +54,15 @@
     <div class="muted">
       © <span id="year"></span>
       <span data-i18n="brand_legal">SEEN Ingénierie S.E.N.C.R.L.</span><br>
-
-      <a class="link" href="https://seen-ingenierie.ca" target="_blank">seen-ingenierie.ca</a>
-      &nbsp;•&nbsp;
-      <a class="link" href="https://seen-engineering.com" target="_blank">seen-engineering.com</a><br>
-
-      <span data-i18n="footer_legal">
-        Exerçant au Québec sous le nom SEEN Ingénierie S.E.N.C.R.L.
-      </span>
+      <span data-i18n="footer_legal">Exerçant au Québec sous le nom SEEN Ingénierie S.E.N.C.R.L.</span>
     </div>
   </div>
 </footer>
 
 <script>
+  // Ensure the page stays French when it loads.
   localStorage.setItem("seen_lang", "fr");
 </script>
-<script src="script.js?v=101"></script>
+<script src="script.js?v=200"></script>
 </body>
 </html>
