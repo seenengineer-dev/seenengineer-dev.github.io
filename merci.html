@@ -3,36 +3,43 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Merci | SEEN Ingénierie S.E.N.C.R.L.</title>
+  <title>Merci | SEEN Ingénierie</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 <header class="topbar">
   <div class="container topbar-inner">
-    <a class="brand" href="index.html" aria-label="SEEN Ingénierie S.E.N.C.R.L.">
+    <a class="brand" href="index.html" aria-label="SEEN Ingénierie">
       <img class="brand-logo" src="assets/seen-logo.png" alt="Logo SEEN" />
       <div class="brand-text">
-        <div class="brand-name">SEEN</div>
-        <div class="brand-sub" data-i18n="brand_sub">Service d'ingénierie</div>
+        <div class="brand-name" data-i18n="brand_name">SEEN Ingénierie</div>
+        <div class="brand-sub" data-i18n="brand_sub">Services d’ingénierie</div>
       </div>
     </a>
 
     <div class="topbar-actions">
-      <button class="btn btn-ghost" id="langToggle" aria-label="Changer de langue">EN</button>
-      <a class="btn btn-primary" href="index.html" data-i18n="thanks_btn">Retour à l’accueil</a>
+      <a class="btn btn-outline" href="https://seen-ingenierie.ca" target="_blank" rel="noopener">seen-ingenierie.ca</a>
+      <a class="btn btn-outline" href="https://seen-engineering.com" target="_blank" rel="noopener">seen-engineering.com</a>
+
+      <button class="btn btn-ghost" id="langToggle">EN</button>
+      <a class="btn btn-primary" href="index.html" data-i18n="thanks_btn">
+        Retour à l’accueil
+      </a>
     </div>
   </div>
 </header>
 
 <main class="section">
   <div class="container">
-    <div class="card">
+    <div class="card" style="text-align:center;">
       <h1 data-i18n="thanks_h2">Merci</h1>
       <p class="muted" data-i18n="thanks_p">
         Votre message a été envoyé avec succès. Nous vous répondrons sous peu.
       </p>
-      <a class="btn btn-outline" href="index.html#contact" data-i18n="thanks_btn">Retour à l’accueil</a>
+      <a class="btn btn-outline" href="index.html#contact" data-i18n="thanks_btn">
+        Retour à l’accueil
+      </a>
     </div>
   </div>
 </main>
@@ -40,20 +47,28 @@
 <footer class="footer">
   <div class="container footer-inner">
     <div>
-      <strong>SEEN Services d'ingénierie</strong><br>
+      <strong data-i18n="brand_name">SEEN Ingénierie</strong><br>
       <span class="muted" data-i18n="footer_sub">L’ingénierie avec vision</span>
     </div>
+
     <div class="muted">
-      © <span id="year"></span> SEEN Engineering Services Inc.<br>
-      <span data-i18n="footer_legal">Exerçant au Québec sous le nom SEEN Ingénierie S.E.N.C.R.L.</span>
+      © <span id="year"></span>
+      <span data-i18n="brand_legal">SEEN Ingénierie S.E.N.C.R.L.</span><br>
+
+      <a class="link" href="https://seen-ingenierie.ca" target="_blank">seen-ingenierie.ca</a>
+      &nbsp;•&nbsp;
+      <a class="link" href="https://seen-engineering.com" target="_blank">seen-engineering.com</a><br>
+
+      <span data-i18n="footer_legal">
+        Exerçant au Québec sous le nom SEEN Ingénierie S.E.N.C.R.L.
+      </span>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=14"></script>
 <script>
-  // Force French on this page by default
   localStorage.setItem("seen_lang", "fr");
 </script>
+<script src="script.js?v=101"></script>
 </body>
 </html>
