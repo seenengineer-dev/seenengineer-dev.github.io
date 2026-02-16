@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const hostname = window.location.hostname.toLowerCase();
 
   function detectDomainLanguage() {
-    // French domain defaults to FR; English domain defaults to EN
     if (hostname.includes("seen-ingenierie") || hostname.includes("ingenierie")) return "fr";
     if (hostname.includes("seen-engineering") || hostname.includes("engineering")) return "en";
     return "en";
@@ -16,12 +15,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ===========================
      i18n DICTIONARY
-     (covers all keys used in index.html + thanks/merci pages)
      =========================== */
   const i18n = {
     en: {
       // Brand
       brand_name: "SEEN Engineering",
+      // ✅ Header subtext you asked for
+      brand_sub: "Engineering Services",
+      // Legal
       brand_legal: "SEEN Engineering L.L.P.",
 
       // Header / CTAs
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
       card_li4: "Utility coordination (Hydro-Québec)",
       card_li5: "Engineering support for contractors & owners",
 
-      // Services section
+      // Services
       services_h2: "Services",
       services_p: "Clear scope, clean deliverables, and code-compliant engineering.",
       s1_h3: "Electrical Engineering",
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       s3_h3: "Utility Coordination",
       s3_p: "Hydro-Québec requests and technical follow-ups.",
 
-      // Contact section
+      // Contact
       contact_h2: "Contact",
       contact_p: "Contact us using the form below.",
       f_name: "Name",
@@ -80,13 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Footer
       footer_sub: "Engineering with Vision",
-      // This line is used as a secondary/legal operation note in your footer
       footer_legal: "Operating in Québec as SEEN Ingénierie S.E.N.C.R.L.",
-
-      // Thank-you pages
-      thanks_h2: "Thank you",
-      thanks_p: "Your message has been sent successfully. We will get back to you shortly.",
-      thanks_btn: "Back to home",
 
       // Form status
       sending: "Sending…",
@@ -98,6 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
     fr: {
       // Brand
       brand_name: "SEEN Ingénierie",
+      // ✅ French header subtext you asked for
+      brand_sub: "Services d’ingénierie",
+      // Legal
       brand_legal: "SEEN Ingénierie S.E.N.C.R.L.",
 
       // Header / CTAs
@@ -127,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
       card_li4: "Coordination des utilités (Hydro-Québec)",
       card_li5: "Support d’ingénierie pour entrepreneurs et clients",
 
-      // Services section
+      // Services
       services_h2: "Services",
       services_p: "Une portée claire, des livrables propres et une ingénierie conforme.",
       s1_h3: "Génie électrique",
@@ -137,7 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
       s3_h3: "Coordination des utilités",
       s3_p: "Demandes Hydro-Québec et suivis techniques.",
 
-      // Contact section
+      // Contact
       contact_h2: "Nous joindre",
       contact_p: "Contactez-nous à l’aide du formulaire ci-dessous.",
       f_name: "Nom",
@@ -157,11 +155,6 @@ document.addEventListener("DOMContentLoaded", () => {
       // Footer
       footer_sub: "L’ingénierie avec vision",
       footer_legal: "Exerçant au Québec sous le nom SEEN Ingénierie S.E.N.C.R.L.",
-
-      // Thank-you pages
-      thanks_h2: "Merci",
-      thanks_p: "Votre message a été envoyé avec succès. Nous vous répondrons sous peu.",
-      thanks_btn: "Retour à l’accueil",
 
       // Form status
       sending: "Envoi en cours…",
@@ -209,7 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ===========================
      EMAIL LINK (obfuscated in JS)
      =========================== */
-  // Build email without writing it as a single string in HTML source
   const emailUser = "info";
   const emailDomain = "seen-ingenierie";
   const emailTld = "ca";
@@ -229,8 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const statusEl = document.getElementById("formStatus");
 
   if (form) {
-    // Clear on load / back navigation
-    form.reset();
+    form.reset(); // clear on load/back
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -240,7 +231,6 @@ document.addEventListener("DOMContentLoaded", () => {
         statusEl.textContent = i18n[lang].sending;
       }
 
-      // Subject formatting
       const name = (form.querySelector('[name="name"]')?.value || "").trim();
       const projectType = (document.getElementById("projectType")?.value || "").trim();
       const province = (document.getElementById("province")?.value || "").trim();
@@ -261,8 +251,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (res.ok) {
           form.reset();
           if (statusEl) statusEl.textContent = i18n[lang].sent;
-
-          // Make sure merci.html / thanks.html exist in repo root
           window.location.href = (lang === "fr") ? "merci.html" : "thanks.html";
           return;
         }
@@ -278,5 +266,4 @@ document.addEventListener("DOMContentLoaded", () => {
      INITIAL RENDER
      =========================== */
   applyI18n();
-  console.log("SEEN script loaded ✅ (brand/legal + domain language + redirects)");
 });
