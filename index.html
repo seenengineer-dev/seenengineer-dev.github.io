@@ -1,32 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta name="language" content="en, fr">
-  <meta name="robots" content="index, follow">
-
-  <link rel="alternate" hreflang="en-ca" href="https://seen-ingenierie.ca/">
-  <link rel="alternate" hreflang="fr-ca" href="https://seen-ingenierie.ca/">
-  <link rel="alternate" hreflang="x-default" href="https://seen-ingenierie.ca/">
-
+  <!-- SEO / bilingual targeting -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="SEEN Engineering L.L.P. — Engineering with Vision." />
-  <title>SEEN Engineering L.L.P. | Engineering with Vision</title>
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="en, fr">
+
+  <!-- Canonical + hreflang (two domains, one site) -->
+  <link rel="canonical" href="https://seen-ingenierie.ca/">
+  <link rel="alternate" hreflang="fr-ca" href="https://seen-ingenierie.ca/">
+  <link rel="alternate" hreflang="en-ca" href="https://seen-engineering.com/">
+  <link rel="alternate" hreflang="x-default" href="https://seen-ingenierie.ca/">
+
+  <meta name="description" content="SEEN Engineering — Engineering with Vision." />
+  <title>SEEN Engineering | Engineering with Vision</title>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 <header class="topbar">
   <div class="container topbar-inner">
-    <a class="brand" href="index.html" aria-label="SEEN Engineering L.L.P.">
+    <a class="brand" href="index.html" aria-label="SEEN Engineering">
       <img class="brand-logo" src="assets/seen-logo.png" alt="SEEN logo" />
       <div class="brand-text">
-        <div class="brand-name">SEEN</div>
-        <div class="brand-sub" data-i18n="brand_sub">Engineering Services</div>
+        <div class="brand-name" data-i18n="brand_name">SEEN Engineering</div>
+        <div class="brand-sub" data-i18n="brand_legal">SEEN Engineering L.L.P.</div>
       </div>
     </a>
 
     <div class="topbar-actions">
+      <!-- show both domains -->
+      <a class="btn btn-outline" href="https://seen-ingenierie.ca" target="_blank" rel="noopener">seen-ingenierie.ca</a>
+      <a class="btn btn-outline" href="https://seen-engineering.com" target="_blank" rel="noopener">seen-engineering.com</a>
+
       <button class="btn btn-ghost" id="langToggle" aria-label="Toggle language">FR</button>
       <a class="btn btn-primary" href="#contact" data-i18n="cta_header">Contact</a>
     </div>
@@ -35,175 +43,176 @@
 
 <main id="top">
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <p class="pill" data-i18n="pill">Professional Engineering • Québec & Canada</p>
-      <h1 data-i18n="h1">Engineering with Vision.</h1>
-      <p class="lead" data-i18n="lead">
-        SEEN Engineering L.L.P. provides clear, code-compliant and constructible engineering
-        solutions with a strong focus on electrical systems and power distribution.
-      </p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="pill" data-i18n="pill">Professional Engineering • Québec & Canada</p>
+        <h1 data-i18n="h1">Engineering with Vision.</h1>
+        <p class="lead" data-i18n="lead">
+          SEEN Engineering provides clear, code-compliant and constructible engineering
+          solutions with a strong focus on electrical systems and power distribution.
+        </p>
 
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#services" data-i18n="cta_primary">Explore Services</a>
-        <a class="btn btn-outline" href="#contact" data-i18n="cta_secondary">Contact</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#services" data-i18n="cta_primary">Explore Services</a>
+          <a class="btn btn-outline" href="#contact" data-i18n="cta_secondary">Contact</a>
+        </div>
+
+        <div class="trust">
+          <div class="trust-item">
+            <div class="trust-title" data-i18n="trust1_title">Bilingual</div>
+            <div class="trust-text" data-i18n="trust1_text">FR / EN deliverables</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-title" data-i18n="trust2_title">Compliant</div>
+            <div class="trust-text" data-i18n="trust2_text">Code-driven engineering</div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-title" data-i18n="trust3_title">Practical</div>
+            <div class="trust-text" data-i18n="trust3_text">Buildable designs</div>
+          </div>
+        </div>
       </div>
 
-      <div class="trust">
-        <div class="trust-item">
-          <div class="trust-title" data-i18n="trust1_title">Bilingual</div>
-          <div class="trust-text" data-i18n="trust1_text">FR / EN deliverables</div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-title" data-i18n="trust2_title">Compliant</div>
-          <div class="trust-text" data-i18n="trust2_text">Code-driven engineering</div>
-        </div>
-        <div class="trust-item">
-          <div class="trust-title" data-i18n="trust3_title">Practical</div>
-          <div class="trust-text" data-i18n="trust3_text">Buildable designs</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2 data-i18n="card_title">What we do</h2>
-      <ul class="checklist">
-        <li data-i18n="card_li1">Electrical engineering consulting & design</li>
-        <li data-i18n="card_li2">Power distribution & service entrance studies</li>
-        <li data-i18n="card_li3">Single-line diagrams & technical deliverables</li>
-        <li data-i18n="card_li4">Utility coordination (Hydro-Québec)</li>
-        <li data-i18n="card_li5">Engineering support for contractors & owners</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="section">
-  <div class="container">
-    <div class="section-head">
-      <h2 data-i18n="services_h2">Services</h2>
-      <p class="muted" data-i18n="services_p">
-        Clear scope, clean deliverables, and code-compliant engineering.
-      </p>
-    </div>
-
-    <div class="grid3">
       <div class="card">
-        <h3 data-i18n="s1_h3">Electrical Engineering</h3>
-        <p class="muted" data-i18n="s1_p">Design, calculations and documentation.</p>
-      </div>
-      <div class="card">
-        <h3 data-i18n="s2_h3">Power Distribution</h3>
-        <p class="muted" data-i18n="s2_p">Service entrance, distribution and metering strategy.</p>
-      </div>
-      <div class="card">
-        <h3 data-i18n="s3_h3">Utility Coordination</h3>
-        <p class="muted" data-i18n="s3_p">Hydro-Québec requests and technical follow-ups.</p>
+        <h2 data-i18n="card_title">What we do</h2>
+        <ul class="checklist">
+          <li data-i18n="card_li1">Electrical engineering consulting & design</li>
+          <li data-i18n="card_li2">Power distribution & service entrance studies</li>
+          <li data-i18n="card_li3">Single-line diagrams & technical deliverables</li>
+          <li data-i18n="card_li4">Utility coordination (Hydro-Québec)</li>
+          <li data-i18n="card_li5">Engineering support for contractors & owners</li>
+        </ul>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section alt">
-  <div class="container">
-    <div class="section-head">
-      <h2 data-i18n="contact_h2">Contact</h2>
-      <p class="muted" data-i18n="contact_p">Contact us using the form below.</p>
-    </div>
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="services_h2">Services</h2>
+        <p class="muted" data-i18n="services_p">
+          Clear scope, clean deliverables, and code-compliant engineering.
+        </p>
+      </div>
 
-    <div class="card">
-      <form id="contactForm"
-            action="https://formspree.io/f/mdadglqd"
-            method="POST"
-            enctype="multipart/form-data"
-            autocomplete="off">
-
-        <input type="text" name="_gotcha" style="display:none">
-        <input type="hidden" name="_subject" id="subjectField">
-
-        <div class="grid2">
-          <label>
-            <span data-i18n="f_name">Name</span>
-            <input name="name" required>
-          </label>
-          <label>
-            <span data-i18n="f_email">Email</span>
-            <!-- Keep name="email" so Formspree sets Reply-To to the visitor (all plans). -->
-            <input type="email" name="email" required>
-          </label>
+      <div class="grid3">
+        <div class="card">
+          <h3 data-i18n="s1_h3">Electrical Engineering</h3>
+          <p class="muted" data-i18n="s1_p">Design, calculations and documentation.</p>
         </div>
-
-        <div class="grid2">
-          <label>
-            <span data-i18n="f_project_type">Project type</span>
-            <select id="projectType" name="project_type" required>
-              <option value="" disabled selected data-i18n="f_select_one">Select one</option>
-              <option value="Electrical engineering" data-i18n="opt_electrical">Electrical engineering</option>
-              <option value="Power distribution / Service entrance" data-i18n="opt_power">Power distribution / Service entrance</option>
-              <option value="Utility coordination (Hydro-Québec)" data-i18n="opt_utility">Utility coordination (Hydro-Québec)</option>
-              <option value="Contractor support" data-i18n="opt_contractor">Contractor support</option>
-              <option value="Other" data-i18n="opt_other">Other</option>
-            </select>
-          </label>
-
-          <label>
-            <span data-i18n="f_province">Province</span>
-            <select id="province" name="province" required>
-              <option value="" disabled selected data-i18n="f_select_one">Select one</option>
-              <option value="QC">Québec</option>
-              <option value="ON">Ontario</option>
-              <option value="AB">Alberta</option>
-              <option value="BC">British Columbia</option>
-            </select>
-          </label>
+        <div class="card">
+          <h3 data-i18n="s2_h3">Power Distribution</h3>
+          <p class="muted" data-i18n="s2_p">Service entrance, distribution and metering strategy.</p>
         </div>
-
-        <label>
-          <span data-i18n="f_msg">Message</span>
-          <textarea name="message" rows="6" required></textarea>
-        </label>
-
-        <button class="btn btn-primary" type="submit" data-i18n="f_submit">Send</button>
-        <p id="formStatus" class="muted" style="display:none;margin-top:10px;"></p>
-
-        <!-- Obfuscated email + copy button (email is inserted by JS) -->
-        <div style="margin-top:14px;">
-  <div class="mini-text muted" data-i18n="contact_alt_label">Or email us directly</div>
-
-  <a id="emailLink"
-     class="link"
-     href="#"
-     aria-label="Email SEEN"
-     style="display:inline-block;margin-top:6px;">
-    info@seen-ingenierie.ca
-  </a>
-</div>
-
-
-      </form>
+        <div class="card">
+          <h3 data-i18n="s3_h3">Utility Coordination</h3>
+          <p class="muted" data-i18n="s3_p">Hydro-Québec requests and technical follow-ups.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<footer class="footer">
-  <div class="container footer-inner">
-    <div>
-      <strong>SEEN Engineering L.L.P.</strong><br>
-      <span class="muted" data-i18n="footer_sub">Engineering with Vision</span>
+  <!-- CONTACT -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="contact_h2">Contact</h2>
+        <p class="muted" data-i18n="contact_p">Contact us using the form below.</p>
+      </div>
+
+      <div class="card">
+        <form id="contactForm"
+              action="https://formspree.io/f/mdadglqd"
+              method="POST"
+              enctype="multipart/form-data"
+              autocomplete="off">
+
+          <input type="text" name="_gotcha" style="display:none">
+          <input type="hidden" name="_subject" id="subjectField">
+
+          <div class="grid2">
+            <label>
+              <span data-i18n="f_name">Name</span>
+              <input name="name" required>
+            </label>
+            <label>
+              <span data-i18n="f_email">Email</span>
+              <input type="email" name="email" required>
+            </label>
+          </div>
+
+          <div class="grid2">
+            <label>
+              <span data-i18n="f_project_type">Project type</span>
+              <select id="projectType" name="project_type" required>
+                <option value="" disabled selected data-i18n="f_select_one">Select one</option>
+                <option value="Electrical engineering" data-i18n="opt_electrical">Electrical engineering</option>
+                <option value="Power distribution / Service entrance" data-i18n="opt_power">Power distribution / Service entrance</option>
+                <option value="Utility coordination (Hydro-Québec)" data-i18n="opt_utility">Utility coordination (Hydro-Québec)</option>
+                <option value="Contractor support" data-i18n="opt_contractor">Contractor support</option>
+                <option value="Other" data-i18n="opt_other">Other</option>
+              </select>
+            </label>
+
+            <label>
+              <span data-i18n="f_province">Province</span>
+              <select id="province" name="province" required>
+                <option value="" disabled selected data-i18n="f_select_one">Select one</option>
+                <option value="QC">Québec</option>
+                <option value="ON">Ontario</option>
+                <option value="AB">Alberta</option>
+                <option value="BC">British Columbia</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            <span data-i18n="f_msg">Message</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+
+          <button class="btn btn-primary" type="submit" data-i18n="f_submit">Send</button>
+          <p id="formStatus" class="muted" style="display:none;margin-top:10px;"></p>
+
+          <!-- Clean email link (text filled/obfuscated by script.js) -->
+          <div style="margin-top:14px;">
+            <div class="mini-text muted" data-i18n="contact_alt_label">Or email us directly</div>
+            <a id="emailLink" class="link" href="#" aria-label="Email SEEN" style="display:inline-block;margin-top:6px;">
+              info@seen-ingenierie.ca
+            </a>
+          </div>
+
+        </form>
+      </div>
     </div>
-    <div class="muted">
-      © <span id="year"></span> SEEN Engineering L.L.P.<br>
-      <span data-i18n="footer_legal">Operating in Québec as SEEN Ingénierie S.E.N.C.R.L.</span>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong data-i18n="brand_name">SEEN Engineering</strong><br>
+        <span class="muted" data-i18n="footer_sub">Engineering with Vision</span>
+      </div>
+
+      <div class="muted">
+        © <span id="year"></span>
+        <span data-i18n="brand_legal">SEEN Engineering L.L.P.</span><br>
+
+        <!-- show both domains in footer -->
+        <a class="link" href="https://seen-ingenierie.ca" target="_blank" rel="noopener">seen-ingenierie.ca</a>
+        &nbsp;•&nbsp;
+        <a class="link" href="https://seen-engineering.com" target="_blank" rel="noopener">seen-engineering.com</a><br>
+
+        <span data-i18n="footer_legal">Operating in Québec as SEEN Ingénierie S.E.N.C.R.L.</span>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </main>
 
-<script src="script.js?v=13"></script>
+<script src="script.js?v=99"></script>
 </body>
 </html>
