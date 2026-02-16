@@ -3,23 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Thank you | SEEN Engineering Services</title>
+  <title>Thank you | SEEN Engineering</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 <header class="topbar">
   <div class="container topbar-inner">
-    <a class="brand" href="index.html" aria-label="SEEN Engineering L.L.P">
+    <a class="brand" href="index.html" aria-label="SEEN Engineering">
       <img class="brand-logo" src="assets/seen-logo.png" alt="SEEN logo" />
       <div class="brand-text">
-        <div class="brand-name">SEEN</div>
+        <div class="brand-name" data-i18n="brand_name">SEEN Engineering</div>
         <div class="brand-sub" data-i18n="brand_sub">Engineering Services</div>
       </div>
     </a>
 
     <div class="topbar-actions">
-      <button class="btn btn-ghost" id="langToggle" aria-label="Toggle language">FR</button>
+      <a class="btn btn-outline" href="https://seen-ingenierie.ca" target="_blank" rel="noopener">seen-ingenierie.ca</a>
+      <a class="btn btn-outline" href="https://seen-engineering.com" target="_blank" rel="noopener">seen-engineering.com</a>
+
+      <button class="btn btn-ghost" id="langToggle">FR</button>
       <a class="btn btn-primary" href="index.html" data-i18n="thanks_btn">Back to home</a>
     </div>
   </div>
@@ -27,12 +30,14 @@
 
 <main class="section">
   <div class="container">
-    <div class="card">
+    <div class="card" style="text-align:center;">
       <h1 data-i18n="thanks_h2">Thank you</h1>
       <p class="muted" data-i18n="thanks_p">
         Your message has been sent successfully. We will get back to you shortly.
       </p>
-      <a class="btn btn-outline" href="index.html#contact" data-i18n="thanks_btn">Back to home</a>
+      <a class="btn btn-outline" href="index.html#contact" data-i18n="thanks_btn">
+        Back to home
+      </a>
     </div>
   </div>
 </main>
@@ -40,16 +45,25 @@
 <footer class="footer">
   <div class="container footer-inner">
     <div>
-      <strong>SEEN Engineering Services</strong><br>
+      <strong data-i18n="brand_name">SEEN Engineering</strong><br>
       <span class="muted" data-i18n="footer_sub">Engineering with Vision</span>
     </div>
+
     <div class="muted">
-      © <span id="year"></span> SEEN Engineering L.L.P<br>
-      <span data-i18n="footer_legal">Operating in Québec as SEEN Ingénierie S.E.N.C.R.L.</span>
+      © <span id="year"></span>
+      <span data-i18n="brand_legal">SEEN Engineering L.L.P.</span><br>
+
+      <a class="link" href="https://seen-ingenierie.ca" target="_blank">seen-ingenierie.ca</a>
+      &nbsp;•&nbsp;
+      <a class="link" href="https://seen-engineering.com" target="_blank">seen-engineering.com</a><br>
+
+      <span data-i18n="footer_legal">
+        Operating in Québec as SEEN Ingénierie S.E.N.C.R.L.
+      </span>
     </div>
   </div>
 </footer>
 
-<script src="script.js?v=14"></script>
+<script src="script.js?v=101"></script>
 </body>
 </html>
