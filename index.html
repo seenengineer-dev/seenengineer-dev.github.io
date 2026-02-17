@@ -6,20 +6,19 @@
   <meta name="robots" content="index, follow" />
   <meta name="language" content="en, fr" />
 
-  <!-- Base SEO (script.js will overwrite title/description per language) -->
+  <!-- Base SEO (script.js will set per language) -->
   <title>SEEN Engineering | Engineering Services</title>
   <meta name="description" content="SEEN Engineering — Engineering Services." />
 
-  <!-- Canonical + hreflang for two-domain bilingual setup -->
+  <!-- Canonical (single domain) -->
   <link rel="canonical" href="https://seen-ingenierie.ca/" />
   <link rel="alternate" hreflang="fr-ca" href="https://seen-ingenierie.ca/" />
-  <link rel="alternate" hreflang="en-ca" href="https://seen-engineering.com/" />
+  <link rel="alternate" hreflang="en-ca" href="https://seen-ingenierie.ca/" />
   <link rel="alternate" hreflang="x-default" href="https://seen-ingenierie.ca/" />
 
-  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- STEP 4: Structured Data (LLP + professional service) -->
+  <!-- Structured Data (script.js will update it per language) -->
   <script type="application/ld+json" id="orgSchema">
   {
     "@context": "https://schema.org",
@@ -28,10 +27,7 @@
     "legalName": "SEEN Engineering L.L.P.",
     "url": "https://seen-ingenierie.ca/",
     "email": "info@seen-ingenierie.ca",
-    "areaServed": {
-      "@type": "Country",
-      "name": "Canada"
-    }
+    "areaServed": { "@type": "Country", "name": "Canada" }
   }
   </script>
 </head>
@@ -48,7 +44,7 @@
     </a>
 
     <div class="topbar-actions">
-      <!-- No domain buttons. Language toggle handles domain switching. -->
+      <!-- Single-domain bilingual toggle -->
       <button class="btn btn-ghost" id="langToggle" aria-label="Toggle language">FR</button>
       <a class="btn btn-primary" href="#contact" data-i18n="cta_header">Contact</a>
     </div>
@@ -64,8 +60,8 @@
         <p class="pill" data-i18n="pill">Professional Engineering • Québec & Canada</p>
         <h1 data-i18n="h1">Engineering with Vision.</h1>
         <p class="lead" data-i18n="lead">
-          SEEN Engineering provides clear, code-compliant and constructible engineering solutions with a strong focus
-          on electrical systems and power distribution.
+          SEEN Engineering provides clear, code-compliant and constructible engineering solutions
+          with a strong focus on electrical systems and power distribution.
         </p>
 
         <div class="hero-actions">
@@ -218,6 +214,6 @@
 
 </main>
 
-<script src="script.js?v=200"></script>
+<script src="script.js?v=1000"></script>
 </body>
 </html>
