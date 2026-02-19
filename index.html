@@ -6,7 +6,7 @@
   <meta name="robots" content="index, follow" />
   <meta name="language" content="en, fr" />
 
-  <!-- Base SEO (script.js will set per language) -->
+  <!-- Base SEO (script.js sets per language) -->
   <title>SEEN Engineering | Engineering Services</title>
   <meta name="description" content="SEEN Engineering — Engineering Services." />
 
@@ -16,9 +16,24 @@
   <link rel="alternate" hreflang="en-ca" href="https://seen-ingenierie.ca/" />
   <link rel="alternate" hreflang="x-default" href="https://seen-ingenierie.ca/" />
 
+  <!-- FAVICONS (put these files in /assets/) -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Social preview (OG image in /assets/) -->
+  <meta property="og:title" content="SEEN Engineering • SEEN Ingénierie" />
+  <meta property="og:description" content="Engineering Services • Services d’ingénierie — Québec & Canada" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://seen-ingenierie.ca/" />
+  <meta property="og:image" content="https://seen-ingenierie.ca/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://seen-ingenierie.ca/assets/og-image.png" />
+
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Structured Data (script.js will update it per language) -->
+  <!-- Structured Data (script.js updates per language) -->
   <script type="application/ld+json" id="orgSchema">
   {
     "@context": "https://schema.org",
@@ -29,6 +44,15 @@
     "email": "info@seen-ingenierie.ca",
     "areaServed": { "@type": "Country", "name": "Canada" }
   }
+  </script>
+
+  <!-- Google Analytics (GA4) — replace G-XXXXXXXXXX -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
   </script>
 </head>
 
@@ -44,7 +68,6 @@
     </a>
 
     <div class="topbar-actions">
-      <!-- Single-domain bilingual toggle -->
       <button class="btn btn-ghost" id="langToggle" aria-label="Toggle language">FR</button>
       <a class="btn btn-primary" href="#contact" data-i18n="cta_header">Contact</a>
     </div>
@@ -53,10 +76,9 @@
 
 <main id="top">
 
-  <!-- HERO -->
   <section class="hero">
     <div class="container hero-grid">
-      <div>
+      <div class="hero-left">
         <p class="pill" data-i18n="pill">Professional Engineering • Québec & Canada</p>
         <h1 data-i18n="h1">Engineering with Vision.</h1>
         <p class="lead" data-i18n="lead">
@@ -67,6 +89,9 @@
         <div class="hero-actions">
           <a class="btn btn-primary" href="#services" data-i18n="cta_primary">Explore Services</a>
           <a class="btn btn-outline" href="#contact" data-i18n="cta_secondary">Contact</a>
+          <a class="btn btn-outline" href="assets/SEEN_Capability_Statement.pdf" target="_blank" rel="noopener" data-i18n="cta_capability">
+            Download Capability Statement
+          </a>
         </div>
 
         <div class="trust">
@@ -85,7 +110,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card hero-card">
         <h2 data-i18n="card_title">What we do</h2>
         <ul class="checklist">
           <li data-i18n="card_li1">Electrical engineering consulting & design</li>
@@ -98,7 +123,6 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section id="services" class="section">
     <div class="container">
       <div class="section-head">
@@ -123,7 +147,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact" class="section alt">
     <div class="container">
       <div class="section-head">
@@ -214,6 +237,6 @@
 
 </main>
 
-<script src="script.js?v=1000"></script>
+<script src="script.js?v=3000"></script>
 </body>
 </html>
