@@ -1,26 +1,32 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Default language: French on seen-ingenierie.ca, otherwise English
-  const host = window.location.hostname.toLowerCase();
-  const defaultLang = host.includes("ingenierie") ? "fr" : "en";
 
-  // Remember user choice on this device
-  let lang = localStorage.getItem("seen_lang") || defaultLang;
-  if (lang !== "en" && lang !== "fr") lang = defaultLang;
+  /* ===========================
+     LANGUAGE STORAGE
+  =========================== */
+
+  let lang = localStorage.getItem("seen_lang") || "en";
+  if (lang !== "en" && lang !== "fr") lang = "en";
+
+  /* ===========================
+     i18n DICTIONARY
+  =========================== */
 
   const i18n = {
     en: {
       brand_name: "SEEN Engineering",
       brand_sub: "Engineering Services",
       brand_legal: "SEEN Engineering L.L.P.",
+      footer_sub: "Engineering with Vision",
+      footer_legal: "Operating in Québec as SEEN Ingénierie S.E.N.C.R.L.",
 
       cta_header: "Contact",
       cta_primary: "Explore Services",
       cta_secondary: "Contact",
+      cta_capability: "Download Capability Statement",
 
       pill: "Professional Engineering • Québec & Canada",
       h1: "Engineering with Vision.",
-      lead:
-        "SEEN Engineering provides clear, code-compliant and constructible engineering solutions with a strong focus on electrical systems and power distribution.",
+      lead: "SEEN Engineering provides clear, code-compliant and constructible engineering solutions with a strong focus on electrical systems and power distribution.",
 
       trust1_title: "Bilingual",
       trust1_text: "FR / EN deliverables",
@@ -47,175 +53,138 @@ document.addEventListener("DOMContentLoaded", () => {
 
       contact_h2: "Contact",
       contact_p: "Contact us using the form below.",
+      contact_alt_label: "Or email us directly",
+
       f_name: "Name",
       f_email: "Email",
       f_project_type: "Project type",
       f_province: "Province",
+      f_msg: "Message",
+      f_submit: "Send",
       f_select_one: "Select one",
+
       opt_electrical: "Electrical engineering",
       opt_power: "Power distribution / Service entrance",
       opt_utility: "Utility coordination (Hydro-Québec)",
       opt_contractor: "Contractor support",
-      opt_other: "Other",
-      f_msg: "Message",
-      f_submit: "Send",
-      contact_alt_label: "Or email us directly",
-
-      footer_sub: "Engineering with Vision",
-      footer_legal: "Operating in Québec as SEEN Ingénierie S.E.N.C.R.L.",
-
-      sending: "Sending…",
-      sent: "Message sent. Redirecting…",
-      error_generic: "Submission failed. Please try again.",
-      error_network: "Network error. Please try again.",
-
-      seo_title: "SEEN Engineering | Electrical Engineering Services in Canada",
-      seo_desc:
-        "SEEN Engineering provides electrical engineering services across Québec and Canada: power distribution, utility coordination, and technical deliverables."
+      opt_other: "Other"
     },
 
     fr: {
       brand_name: "SEEN Ingénierie",
       brand_sub: "Services d’ingénierie",
       brand_legal: "SEEN Ingénierie S.E.N.C.R.L.",
+      footer_sub: "L’ingénierie avec vision",
+      footer_legal: "Exerçant au Québec sous le nom SEEN Ingénierie S.E.N.C.R.L.",
 
       cta_header: "Nous joindre",
       cta_primary: "Voir les services",
       cta_secondary: "Nous joindre",
+      cta_capability: "Télécharger la fiche de capacités",
 
       pill: "Génie professionnel • Québec & Canada",
       h1: "L’ingénierie avec vision.",
-      lead:
-        "SEEN Ingénierie offre des services d’ingénierie clairs, conformes aux codes et constructibles, avec un fort accent sur les systèmes électriques et la distribution de puissance.",
+      lead: "SEEN Ingénierie offre des solutions claires, conformes aux codes et constructibles, avec un fort accent sur les systèmes électriques et la distribution de puissance.",
 
       trust1_title: "Bilingue",
       trust1_text: "Livrables FR / EN",
       trust2_title: "Conforme",
-      trust2_text: "Approche axée sur les codes",
+      trust2_text: "Ingénierie basée sur les codes",
       trust3_title: "Pratique",
-      trust3_text: "Designs constructibles",
+      trust3_text: "Conceptions constructibles",
 
-      card_title: "Ce que nous faisons",
+      card_title: "Nos services",
       card_li1: "Conseil et conception en génie électrique",
-      card_li2: "Distribution et études d’entrée de service",
+      card_li2: "Distribution électrique et études d’entrée de service",
       card_li3: "Schémas unifilaires et livrables techniques",
-      card_li4: "Coordination des utilités (Hydro-Québec)",
-      card_li5: "Support d’ingénierie pour entrepreneurs et clients",
+      card_li4: "Coordination avec Hydro-Québec",
+      card_li5: "Support d’ingénierie aux entrepreneurs et propriétaires",
 
       services_h2: "Services",
-      services_p: "Une portée claire, des livrables propres et une ingénierie conforme.",
+      services_p: "Portée claire, livrables précis et ingénierie conforme aux codes.",
       s1_h3: "Génie électrique",
       s1_p: "Conception, calculs et documentation.",
-      s2_h3: "Distribution de puissance",
+      s2_h3: "Distribution électrique",
       s2_p: "Entrée de service, distribution et stratégie de mesurage.",
-      s3_h3: "Coordination des utilités",
-      s3_p: "Demandes Hydro-Québec et suivis techniques.",
+      s3_h3: "Coordination utilités",
+      s3_p: "Demandes et suivis techniques avec Hydro-Québec.",
 
-      contact_h2: "Nous joindre",
-      contact_p: "Contactez-nous à l’aide du formulaire ci-dessous.",
+      contact_h2: "Contact",
+      contact_p: "Communiquez avec nous à l’aide du formulaire ci-dessous.",
+      contact_alt_label: "Ou écrivez-nous directement",
+
       f_name: "Nom",
       f_email: "Courriel",
       f_project_type: "Type de projet",
       f_province: "Province",
-      f_select_one: "Choisir",
-      opt_electrical: "Génie électrique",
-      opt_power: "Distribution / entrée de service",
-      opt_utility: "Coordination des utilités (Hydro-Québec)",
-      opt_contractor: "Support entrepreneur",
-      opt_other: "Autre",
       f_msg: "Message",
       f_submit: "Envoyer",
-      contact_alt_label: "Ou écrivez-nous directement",
+      f_select_one: "Sélectionner",
 
-      footer_sub: "L’ingénierie avec vision",
-      footer_legal: "Exerçant au Québec sous le nom SEEN Ingénierie S.E.N.C.R.L.",
-
-      sending: "Envoi en cours…",
-      sent: "Message envoyé. Redirection…",
-      error_generic: "Échec de l’envoi. Veuillez réessayer.",
-      error_network: "Erreur réseau. Veuillez réessayer.",
-
-      seo_title: "SEEN Ingénierie | Services d’ingénierie électrique au Québec",
-      seo_desc:
-        "SEEN Ingénierie offre des services d’ingénierie électrique au Québec et au Canada : distribution, coordination utilités et livrables techniques."
+      opt_electrical: "Génie électrique",
+      opt_power: "Distribution / Entrée de service",
+      opt_utility: "Coordination (Hydro-Québec)",
+      opt_contractor: "Support entrepreneur",
+      opt_other: "Autre"
     }
   };
 
-  function setMetaDescription(content) {
-    let meta = document.querySelector('meta[name="description"]');
-    if (!meta) {
-      meta = document.createElement("meta");
-      meta.setAttribute("name", "description");
-      document.head.appendChild(meta);
-    }
-    meta.setAttribute("content", content);
-  }
+  /* ===========================
+     APPLY LANGUAGE
+  =========================== */
 
-  function updateSchemaForLanguage() {
-    const schemaEl = document.getElementById("orgSchema");
-    if (!schemaEl) return;
-
-    const base = {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "email": "info@seen-ingenierie.ca",
-      "areaServed": { "@type": "Country", "name": "Canada" },
-      "url": "https://seen-ingenierie.ca/"
-    };
-
-    const schema =
-      lang === "fr"
-        ? { ...base, name: "SEEN Ingénierie", legalName: "SEEN Ingénierie S.E.N.C.R.L." }
-        : { ...base, name: "SEEN Engineering", legalName: "SEEN Engineering L.L.P." };
-
-    schemaEl.textContent = JSON.stringify(schema, null, 2);
-  }
-
-  function applyI18n() {
+  function applyLanguage() {
     document.documentElement.lang = lang;
 
-    document.querySelectorAll("[data-i18n]").forEach((el) => {
+    document.querySelectorAll("[data-i18n]").forEach(el => {
       const key = el.getAttribute("data-i18n");
-      const val = i18n?.[lang]?.[key];
-      if (val) el.textContent = val;
+      if (i18n[lang][key]) el.textContent = i18n[lang][key];
     });
 
-    document.title = i18n[lang].seo_title;
-    setMetaDescription(i18n[lang].seo_desc);
-    updateSchemaForLanguage();
+    document.title = (lang === "fr")
+      ? "SEEN Ingénierie | Services d’ingénierie"
+      : "SEEN Engineering | Engineering Services";
 
-    const btn = document.getElementById("langToggle");
-    if (btn) btn.textContent = (lang === "en") ? "FR" : "EN";
+    document.querySelector('meta[name="description"]').setAttribute(
+      "content",
+      (lang === "fr")
+        ? "SEEN Ingénierie — Services d’ingénierie au Québec et au Canada."
+        : "SEEN Engineering — Engineering Services in Québec and Canada."
+    );
 
     localStorage.setItem("seen_lang", lang);
+
+    const toggle = document.getElementById("langToggle");
+    if (toggle) toggle.textContent = (lang === "en") ? "FR" : "EN";
   }
 
-  // Toggle language on same domain
-  const toggleBtn = document.getElementById("langToggle");
-  if (toggleBtn) {
-    toggleBtn.addEventListener("click", () => {
+  /* ===========================
+     TOGGLE BUTTON
+  =========================== */
+
+  const toggle = document.getElementById("langToggle");
+  if (toggle) {
+    toggle.addEventListener("click", () => {
       lang = (lang === "en") ? "fr" : "en";
-      applyI18n();
+      applyLanguage();
     });
   }
 
-  // Footer year
-  const yearEl = document.getElementById("year");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
+  /* ===========================
+     EMAIL INJECTION
+  =========================== */
 
-  // Email link (assembled)
-  const emailUser = "info";
-  const emailDomain = "seen-ingenierie";
-  const emailTld = "ca";
-  const email = `${emailUser}@${emailDomain}.${emailTld}`;
-
+  const email = "info@seen-ingenierie.ca";
   const emailLink = document.getElementById("emailLink");
   if (emailLink) {
     emailLink.href = `mailto:${email}`;
     emailLink.textContent = email;
   }
 
-  // Form submission (AJAX) + redirect to thank-you pages on same domain
+  /* ===========================
+     FORM
+  =========================== */
+
   const form = document.getElementById("contactForm");
   const statusEl = document.getElementById("formStatus");
 
@@ -227,17 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (statusEl) {
         statusEl.style.display = "block";
-        statusEl.textContent = i18n[lang].sending;
-      }
-
-      const name = (form.querySelector('[name="name"]')?.value || "").trim();
-      const projectType = (document.getElementById("projectType")?.value || "").trim();
-      const province = (document.getElementById("province")?.value || "").trim();
-      const who = name || "Client";
-
-      const subjectField = document.getElementById("subjectField");
-      if (subjectField) {
-        subjectField.value = `SEEN Inquiry | ${projectType || "General"} | ${province || "NA"} | ${who}`;
+        statusEl.textContent = (lang === "fr") ? "Envoi en cours…" : "Sending…";
       }
 
       try {
@@ -249,17 +208,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (res.ok) {
           form.reset();
-          if (statusEl) statusEl.textContent = i18n[lang].sent;
           window.location.href = (lang === "fr") ? "merci.html" : "thanks.html";
-          return;
+        } else {
+          statusEl.textContent = (lang === "fr") ? "Échec de l’envoi." : "Submission failed.";
         }
 
-        if (statusEl) statusEl.textContent = i18n[lang].error_generic;
       } catch {
-        if (statusEl) statusEl.textContent = i18n[lang].error_network;
+        statusEl.textContent = (lang === "fr") ? "Erreur réseau." : "Network error.";
       }
     });
   }
 
-  applyI18n();
+  applyLanguage();
 });
