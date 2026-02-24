@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+
+  <title>Privacy Policy | SEEN Engineering</title>
+  <meta name="description" content="Privacy Policy for SEEN Engineering / SEEN Ingénierie." />
+
+  <link rel="canonical" href="https://seen-ingenierie.ca/privacy.html" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured Data (optional; kept simple) -->
+</head>
+
+<body>
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html" aria-label="SEEN Engineering">
+      <img class="brand-logo" src="assets/seen-logo.png" alt="SEEN logo" />
+      <div class="brand-text">
+        <div class="brand-name" data-i18n="brand_name">SEEN Engineering</div>
+        <div class="brand-sub" data-i18n="brand_sub">Engineering Services</div>
+      </div>
+    </a>
+
+    <div class="topbar-actions">
+      <button class="btn btn-ghost" id="langToggle" aria-label="Toggle language">FR</button>
+      <a class="btn btn-primary" href="index.html#contact" data-i18n="cta_header">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main class="section">
+  <div class="container">
+    <div class="card">
+      <h1 data-i18n="privacy_title">Privacy Policy</h1>
+      <p class="muted" data-i18n="privacy_updated">Last updated: 2026-02-21</p>
+
+      <h2 data-i18n="privacy_h2_1">1. Who we are</h2>
+      <p data-i18n="privacy_p_1">
+        SEEN Engineering / SEEN Ingénierie provides engineering services in Québec and across Canada. This policy explains how we handle personal information on our website.
+      </p>
+
+      <h2 data-i18n="privacy_h2_2">2. What we collect</h2>
+      <ul>
+        <li data-i18n="privacy_li_2a">Contact form details (name, email, project details, message).</li>
+        <li data-i18n="privacy_li_2b">Technical data (IP address, browser/device info) for security and analytics, when consent is given.</li>
+      </ul>
+
+      <h2 data-i18n="privacy_h2_3">3. How we use it</h2>
+      <ul>
+        <li data-i18n="privacy_li_3a">To respond to inquiries and provide services/quotes.</li>
+        <li data-i18n="privacy_li_3b">To improve the website and measure performance (analytics), only if you accept cookies.</li>
+      </ul>
+
+      <h2 data-i18n="privacy_h2_4">4. Sharing</h2>
+      <p data-i18n="privacy_p_4">
+        We do not sell personal information. We may use service providers (e.g., Formspree for form delivery, Google Analytics if consent is given) to operate the website.
+      </p>
+
+      <h2 data-i18n="privacy_h2_5">5. Retention</h2>
+      <p data-i18n="privacy_p_5">
+        We retain information only as long as needed for the purposes above, or as required by law.
+      </p>
+
+      <h2 data-i18n="privacy_h2_6">6. Your choices</h2>
+      <ul>
+        <li data-i18n="privacy_li_6a">You can decline analytics cookies using the cookie banner.</li>
+        <li data-i18n="privacy_li_6b">You can request access/correction/deletion of your personal information.</li>
+      </ul>
+
+      <h2 data-i18n="privacy_h2_7">7. Contact</h2>
+      <p>
+        <span data-i18n="privacy_contact_line">For privacy requests, contact:</span>
+        <a id="emailLink" class="link" href="#">info@seen-ingenierie.ca</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <strong data-i18n="brand_name">SEEN Engineering</strong><br>
+      <span class="muted" data-i18n="footer_sub">Engineering with Vision</span>
+    </div>
+
+    <div class="muted">
+      © <span id="year"></span> <span data-i18n="brand_legal">SEEN Engineering L.L.P.</span><br>
+      <a class="link" href="privacy.html" data-i18n="footer_privacy">Privacy</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Cookie banner -->
+<div id="cookieBanner" class="cookie-banner" style="display:none;">
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <strong data-i18n="cookie_title">Cookies</strong>
+      <div class="muted" data-i18n="cookie_text">
+        We use cookies for analytics to improve the site. You can accept or decline.
+      </div>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn btn-outline" id="cookieDecline" type="button" data-i18n="cookie_decline">Decline</button>
+      <button class="btn btn-primary" id="cookieAccept" type="button" data-i18n="cookie_accept">Accept</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js?v=4000"></script>
+</body>
+</html>
