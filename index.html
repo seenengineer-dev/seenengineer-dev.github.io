@@ -35,16 +35,31 @@
 
   <!-- Structured Data (script.js updates per language) -->
   <script type="application/ld+json" id="orgSchema">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "SEEN Engineering",
-    "legalName": "SEEN Engineering L.L.P.",
-    "url": "https://seen-ingenierie.ca/",
-    "email": "info@seen-ingenierie.ca",
-    "areaServed": { "@type": "Country", "name": "Canada" }
-  }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "SEEN Engineering",
+  "legalName": "SEEN Engineering L.L.P.",
+  "url": "https://seen-ingenierie.ca/",
+  "email": "info@seen-ingenierie.ca",
+  "areaServed": {
+    "@type": "Country",
+    "name": "Canada"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Montréal",
+    "addressRegion": "QC",
+    "addressCountry": "CA"
+  },
+  "serviceType": [
+    "Electrical Engineering",
+    "Power Distribution Engineering",
+    "Service Entrance Studies",
+    "Utility Coordination"
+  ]
+}
+</script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-2QZ63P21PS"></script>
