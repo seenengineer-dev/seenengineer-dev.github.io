@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://seen-ingenierie.ca/</loc>
   </url>
+
+  <url>
+    <loc>https://seen-ingenierie.ca/services.html</loc>
+  </url>
+
   <url>
     <loc>https://seen-ingenierie.ca/privacy.html</loc>
   </url>
+
   <url>
     <loc>https://seen-ingenierie.ca/thanks.html</loc>
   </url>
+
   <url>
     <loc>https://seen-ingenierie.ca/merci.html</loc>
   </url>
+
 </urlset>
